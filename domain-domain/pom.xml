@@ -3,19 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ryan</groupId>
+        <artifactId>DomainArch</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>com.ryan</groupId>
-    <artifactId>DomainArch</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>domain-fein</module>
-        <module>domain-infrastructure</module>
-        <module>domain-domain</module>
-        <module>domain-application</module>
-        <module>domain-adapter</module>
+    <artifactId>domain-domain</artifactId>
 
-    </modules>
+    <dependencies>
+        <!-- domain层保证内聚性，劲量少依赖外部组件，劲量做到解耦，但是可以依赖公共组件包，比如sof -->
+    </dependencies>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
